@@ -1,1 +1,2 @@
-# Template webpack react
+# curso de introduccion a React
+
