@@ -1,0 +1,40 @@
+{
+  "name": "curso-webpack-react",
+  "description": "",
+  "version": "1.0.0",
+  "main": "index.js",
+  "keywords": [],
+  "author": "Hernan-Hernandezz",
+  "license": "MIT",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "webpack serve --open --config webpack.config.dev.js",
+    "build": "webpack --config webpack.config.js"
+  },
+  "dependencies": {
+    "copy-webpack-plugin": "^10.1.0",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "react-router-dom": "^6.1.1",
+    "sass": "^1.45.0",
+    "sass-loader": "^12.4.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.16.0",
+    "@babel/preset-env": "^7.16.4",
+    "@babel/preset-react": "^7.16.0",
+    "babel-loader": "^8.2.3",
+    "clean-webpack-plugin": "^3.0.0",
+    "css-loader": "^5.2.7",
+    "css-minimizer-webpack-plugin": "^3.2.0",
+    "gitmoji-cli": "^4.7.0",
+    "html-loader": "^2.1.2",
+    "html-webpack-plugin": "^5.5.0",
+    "mini-css-extract-plugin": "^1.6.2",
+    "style-loader": "^2.0.0",
+    "terser-webpack-plugin": "^5.2.5",
+    "webpack": "^5.65.0",
+    "webpack-cli": "^4.9.1",
+    "webpack-dev-server": "^4.6.0"
+  }
+}
