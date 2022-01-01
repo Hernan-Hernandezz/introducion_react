@@ -1,0 +1,21 @@
+@import "vars";
+.TodoItem {
+  border: 1px solid #898989;
+  list-style-type: none;
+  text-align: center;
+}
+.Icon-delete {
+  position: relative;
+  left: 48%;
+  //border: 1px solid #fff;
+  border-radius: 50%;
+  padding: 1%;
+  color: #ff1700;
+  background-color: #fff;
+  box-shadow: 0px 0px 20px 8px #ff1700;
+  text-shadow: none;
+}
+.Icon-delete:hover {
+  background-color: #ff1700;
+  color: #fff;
+}
