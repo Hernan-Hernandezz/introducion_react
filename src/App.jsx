@@ -3,6 +3,7 @@ import { TodoCounter } from "@components/TodoCounter.jsx";
 import { TodoList } from "@components/TodoList.jsx";
 import { TodoItem } from "@components/TodoItem.jsx";
 import { TodoSearch } from "@components/TodoSearch.jsx";
+import { CreateTodoButton } from "@components/CreateTodoButton";
 
 const todos = [
   { text: "Cortar cebolla", completed: true },
@@ -24,9 +25,9 @@ const App = () => {
           />
         ))}
       </TodoList>
+      <CreateTodoButton />
     </React.Fragment>
   );
 };
 
 export default App;
-
