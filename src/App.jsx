@@ -12,6 +12,9 @@ const todos = [
   { text: "LALALALAA", completed: false },
 ];
 const App = () => {
+  const [search, setSearch] = useState("");
+  const [totalTodos, setTotalTodos] = useState("");
+
   return (
     <React.Fragment>
       <TodoCounter />
