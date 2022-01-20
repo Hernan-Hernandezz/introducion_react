@@ -17,19 +17,19 @@ const App = () => {
   //const [todoCompleted, setTodoCompleted] = React.useState("");
   const todoCompleted = todos.filter((todo) => !!todo.completed).length;
   const totalTodos = todos.length;
+  const equate = (todo) => {
+    const text = todo.text.toLowerCase();
+    if (text.includes(search.toLowerCase())) {
+      return (
+        <TodoItem key={todo.text} text={todo.text} completed={todo.completed} />
+      );
+    }
+  };
   return (
     <React.Fragment>
       <TodoCounter totalTodos={totalTodos} todoCompleted={todoCompleted} />
       <TodoSearch search={search} setSearch={setSearch} />
-      <TodoList>
-        {todos.map((todo) => (
-          <TodoItem
-            key={todo.text}
-            text={todo.text}
-            completed={todo.completed}
-          />
-        ))}
-      </TodoList>
+      <TodoList>{todos.map((todo) => equate(todo))}</TodoList>
       <CreateTodoButton />
     </React.Fragment>
   );

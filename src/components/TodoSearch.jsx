@@ -3,7 +3,6 @@ import "@styles/TodoSearch.scss";
 function TodoSearch({ search, setSearch }) {
   const onSearchValueChange = (event) => {
     //esta funcion escucha los cambios a input
-    console.log(event.target.value);
     setSearch(event.target.value);
   };
   return [
@@ -13,7 +12,6 @@ function TodoSearch({ search, setSearch }) {
       value={search}
       onChange={onSearchValueChange}
     />,
-    <p>{search}</p>,
   ];
 }
 
