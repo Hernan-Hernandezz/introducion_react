@@ -4,6 +4,7 @@ import { TodoList } from "@components/TodoList.jsx";
 import { TodoItem } from "@components/TodoItem.jsx";
 import { TodoSearch } from "@components/TodoSearch.jsx";
 import { CreateTodoButton } from "@components/CreateTodoButton";
+import { TodoModal } from "@components/TodoModal";
 
 const defaultTodos = [
   { text: "Cortar cebolla", completed: true, key: 1 },
@@ -46,6 +47,7 @@ const App = () => {
       <TodoSearch search={search} setSearch={setSearch} />
       <TodoList>{todos.map((todo) => equate(todo))}</TodoList>
       <CreateTodoButton />
+      <TodoModal />
     </React.Fragment>
   );
 };
