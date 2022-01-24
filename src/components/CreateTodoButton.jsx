@@ -1,15 +1,12 @@
 import React from "react";
 import "@styles/CreateTodoButton.scss";
-const CreateTodoButton = (props) => {
-  const onClickButton = (message) => {
-    console.log(message);
+const CreateTodoButton = ({ setVisibility }) => {
+  const openModal = () => {
+    setVisibility("active");
   };
 
   return (
-    <button
-      className="CreateTodoButton"
-      onClick={() => onClickButton("Abrir modal")}
-    >
+    <button className="CreateTodoButton" onClick={openModal}>
       +
     </button>
   );

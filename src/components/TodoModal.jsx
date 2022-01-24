@@ -1,13 +1,31 @@
 import React from "react";
 import "@styles/TodoModal.scss";
-const TodoModal = () => {
+const TodoModal = ({ todos, setTodos, visibility, setVisibility }) => {
+  const addTodo = () => {
+    const input = document.querySelector("#todo");
+    const newTodos = [...todos];
+    newTodos.push({ text: input.value, completed: false });
+    localStorage.setItem("TODOS_V1", JSON.stringify(newTodos));
+    setTodos(newTodos);
+    input.value = "";
+    setVisibility("desactive");
+  };
+  const hidden = () => setVisibility("desactive");
   return (
-    <div className="TodoModal">
+    <div className={"TodoModal-" + visibility}>
       <input
         type="text"
         placeholder="ingresa tu tarea"
         className="TodoModal-input"
+        id="todo"
       />
+      <br />
+      <button type="button" onClick={addTodo}>
+        guardar
+      </button>
+      <button type="button" onClick={hidden}>
+        cancelar
+      </button>
     </div>
   );
 };

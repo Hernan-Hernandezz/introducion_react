@@ -24,6 +24,7 @@ const App = () => {
 
   const [search, setSearch] = React.useState("");
   const [todos, setTodos] = React.useState(parcedTodos);
+  const [visibility, setVisibility] = React.useState("desactive");
   //const [todoCompleted, setTodoCompleted] = React.useState("");
   const todoCompleted = todos.filter((todo) => !!todo.completed).length;
   const totalTodos = todos.length;
@@ -46,8 +47,13 @@ const App = () => {
       <TodoCounter totalTodos={totalTodos} todoCompleted={todoCompleted} />
       <TodoSearch search={search} setSearch={setSearch} />
       <TodoList>{todos.map((todo) => equate(todo))}</TodoList>
-      <CreateTodoButton />
-      <TodoModal />
+      <CreateTodoButton setVisibility={setVisibility} />
+      <TodoModal
+        todos={todos}
+        setTodos={setTodos}
+        visibility={visibility}
+        setVisibility={setVisibility}
+      />
     </React.Fragment>
   );
 };
