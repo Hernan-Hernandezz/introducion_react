@@ -19,11 +19,10 @@ const TodoModal = ({ todos, setTodos, visibility, setVisibility }) => {
         className="TodoModal-input"
         id="todo"
       />
-      <br />
-      <button type="button" onClick={addTodo}>
+      <button type="button" id="save" onClick={addTodo}>
         guardar
       </button>
-      <button type="button" onClick={hidden}>
+      <button type="button" id="cancel" onClick={hidden}>
         cancelar
       </button>
     </div>

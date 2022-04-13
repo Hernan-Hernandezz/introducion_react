@@ -1,7 +1,9 @@
 .TodoModal-active {
   position: absolute;
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-areas:
+    "input input"
+    "cancel save";
   justify-content: center;
   align-items: center;
   z-index: 1;
@@ -26,8 +28,15 @@
   font-size: 24px;
   border-radius: 10px;
   box-sizing: content-box;
+  grid-area: input;
 }
 .TodoModal button {
   padding: 10px;
   margin: 0 8px;
+  & #cancel {
+    grid-area: cancel;
+  }
+  & #save {
+    grid-area: save;
+  }
 }

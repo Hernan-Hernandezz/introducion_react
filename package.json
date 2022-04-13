@@ -27,6 +27,7 @@
     "clean-webpack-plugin": "^3.0.0",
     "css-loader": "^5.2.7",
     "css-minimizer-webpack-plugin": "^3.2.0",
+    "gh-pages": "^3.2.3",
     "gitmoji-cli": "^4.7.0",
     "html-loader": "^2.1.2",
     "html-webpack-plugin": "^5.5.0",
@@ -35,6 +36,6 @@
     "terser-webpack-plugin": "^5.2.5",
     "webpack": "^5.65.0",
     "webpack-cli": "^4.9.1",
-    "webpack-dev-server": "^4.6.0"
+    "webpack-dev-server": "^4.8.1"
   }
 }
